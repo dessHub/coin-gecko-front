@@ -1,0 +1,139 @@
+@import "../../styles/variables.scss";
+
+.info-card-cont {
+    width: 100%;
+    background-color: $secondary-color;
+    border-radius: $border-radius;
+    border-top: 2rem;
+    padding: 1rem 0;
+    position: relative;
+
+
+    > .title {
+        font-size: 16px;
+        color: $primary-text-color;
+        padding: 1rem;
+    }
+
+    .description-cont {
+        width: 100%;
+        border-radius: $border-radius;
+        padding: 1rem .5rem 1rem 2rem;
+        background-color: $secondary-color-1;
+        margin-bottom: 2rem;
+
+        > div {
+            color: $primary-text-color;
+            font-weight: 700;
+            font-size: 14px;
+        }
+
+        p {
+            margin-left: .5rem;
+            color: $primary-text-color;
+            font-weight: 100;
+        }
+    }
+
+    .coin-icon-cont {
+        width: 3rem;
+        height: 3rem;
+        border-radius: $border-radius;
+        background-color: #fff;
+        padding: .2rem;
+        position: absolute;
+        right: 3%;
+        top: -2%;
+    }
+}
+
+.sites {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: .5rem 1rem;
+}
+
+.site-card {
+    background-color: $primary-color;
+    padding: .5rem;
+    border-radius: $border-radius;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    label {
+        font-size: 16px;
+        color: $primary-text-color;
+        margin-right: .5rem;
+    }
+
+    .icon {
+        height: 1.5rem;
+        width: 1.5rem;
+    }
+
+    .globe {
+        color: #5d52f2;
+    }
+
+    .reddit {
+        color: #fc8d05
+    }
+}
+
+.github {
+    background-color: $secondary-color-3;
+}
+
+.facts-container {
+    padding: 1rem;
+    width: 100%;
+
+    .title {
+        font-size: 16px;
+        color: $primary-text-color;
+        font-weight: 700;
+        padding: 0;
+    }
+
+    .divider {
+        width: 90%;
+        margin: 1rem .5rem;
+        height: 1px;
+        background-color: $secondary-color-1;
+    }
+
+    .fact-row {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 1rem;
+
+        span {
+            font-size: 14px;
+            color: $primary-text-color;
+            font-weight: 500;
+        }
+    }
+}
+
+.metrics-container {
+    margin: 1rem;
+    width: stretch;
+    border-radius: $border-radius;
+    background-color: $secondary-color-1;
+    padding: 1rem;
+
+    .metric-row {
+        display: flex;
+        justify-content: space-between;
+        margin: .5rem 0;
+
+        span {
+            font-size: 14px;
+            color: $primary-text-color;
+            font-weight: 400;
+        }
+    }
+}

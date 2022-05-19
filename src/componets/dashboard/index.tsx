@@ -12,7 +12,7 @@ export default function Dashboard () {
       <div className="dashboard">
         <div className="search-container">
           <Search className="search-icon" />
-          <input className="search-input" />
+          <input className="search-input" placeholder="search" />
         </div>
 
         <div className="content-section">

@@ -1,0 +1,39 @@
+@import "../../styles/variables.scss";
+
+.coin-chart-container {
+    width: 100%;
+    padding: 2rem;
+    background-color: $secondary-color;
+    border-radius: $border-radius;
+    margin-bottom: 2rem;
+
+    .top {
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    .amount {
+        font-size: 18px;
+        font-weight: bold;
+        color: #fff;
+        margin-right: 3rem;
+    }
+
+    .change {
+        color: $secondary-color-5;
+        font-size: 18px;
+    }
+
+    .icon {
+        height: .7rem;
+        width: .7rem;
+        margin-left: .5rem;
+    }
+
+    .chart-container {
+        min-height: 10rem;
+        width: 100%;
+        margin-top: 2rem;
+    }
+}
