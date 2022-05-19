@@ -43,7 +43,7 @@
 .content-section {
     display: flex;
 
-    @media (max-width: 480px) {
+    @media (max-width: $tablet-breakpoint) {
         flex-direction: column;
     }
 }
@@ -52,7 +52,7 @@
     width: 70%;
     margin-right: 1rem;
 
-    @media (max-width: 480px) {
+    @media (max-width: $tablet-breakpoint) {
         width: 100%;
     }
 }
@@ -61,7 +61,7 @@
     flex: 1;
     max-height: 90vh;
 
-    @media (max-width: 480px) {
+    @media (max-width: $tablet-breakpoint) {
         width: 100%;
     }
 }

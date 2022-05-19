@@ -1,6 +1,6 @@
 import React from "react";
 import "./index.scss";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { BarChartFill, BorderWidth } from "react-bootstrap-icons";
 
 export default function Nav() {
@@ -12,14 +12,24 @@ export default function Nav() {
 
         <div className="nav-menu">
           <li className="nav-menu-item">
-            <Link to={"/"} className="nav-menu-link active-nav">
+            <NavLink
+              to={"/"}
+              className={({ isActive }) =>
+                isActive ? "nav-menu-link active-nav" : "nav-menu-link"
+              }
+            >
               <BorderWidth className="nav-icon" />
-            </Link>
+            </NavLink>
           </li>
           <li className="nav-menu-item">
-            <Link to={"/info"} className="nav-menu-link">
+            <NavLink
+              to={"/info"}
+              className={({ isActive }) =>
+                isActive ? "nav-menu-link active-nav" : "nav-menu-link"
+              }
+            >
               <BarChartFill className="nav-icon" />
-            </Link>
+            </NavLink>
           </li>
         </div>
       </div>

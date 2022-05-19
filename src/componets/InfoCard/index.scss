@@ -50,7 +50,7 @@
 .sites {
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     padding: .5rem 1rem;
 }
 
@@ -61,6 +61,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 0 .5rem;
 
     label {
         font-size: 16px;

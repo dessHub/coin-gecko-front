@@ -28,11 +28,9 @@ export default function CoinChart() {
     labels: ["January", "February", "March", "April", "May", "June", "July"],
     datasets: [
       {
-        label: "Dataset 1",
         data: [65, 59, 80, 81, 56, 55, 40],
         fill: false,
         tension: 0.4,
-        borderColor: "#2C64BC",
       },
     ],
   };
@@ -43,15 +41,22 @@ export default function CoinChart() {
   };
 
   const options = {
+    responsive: true,
+    maintainAspectRatio: false,
     scales: {
       x: {
         grid: {
           drawOnChartArea: false,
-          drawTicks: true,
+          drawTicks: false,
+          drawBorder: false,
+        },
+        ticks: {
+          display: false,
         },
       },
       y: {
         grid: {
+          drawOnChartArea: false,
           drawBorder: false,
           drawTicks: false,
         },
@@ -61,7 +66,7 @@ export default function CoinChart() {
           font: {
             size: 14,
           },
-          display: true,
+          display: false,
         },
       },
     },
