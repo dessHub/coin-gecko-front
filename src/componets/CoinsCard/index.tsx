@@ -1,23 +1,25 @@
 import React from "react";
 import "./index.scss";
+import Loader from "../Loader";
 
-export default function CoinsCard() {
-    
-    return (
-      <div className="coins-card">
-        <div className="container-title">All Coins</div>
+interface CoinsCardProps {
+  coins: any[];
+  isLoading: boolean;
+}
 
-        <div className="coins-list">
-          <div>Name (Symbol)</div>
-          <div>Name (Symbol)</div>
-          <div>Name (Symbol)</div>
-          <div>Name (Symbol)</div>
-          <div>Name (Symbol)</div>
-          <div>Name (Symbol)</div>
-          <div>Name (Symbol)</div>
-          <div>Name (Symbol)</div>
-          <div>Name (Symbol)</div>
-        </div>
+export default function CoinsCard({coins, isLoading}: CoinsCardProps) {
+  return (
+    <div className="coins-card">
+      <div className="container-title">All Coins</div>
+
+      <div className="coins-list">
+        {coins.map((coin) => (
+          <div key={coin.id}>
+            {coin.name} ({coin.symbol})
+          </div>
+        ))}
+        {isLoading && (<Loader />)}
       </div>
-    );
+    </div>
+  );
 }

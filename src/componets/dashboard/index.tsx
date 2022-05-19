@@ -12,10 +12,9 @@ import { AppDispatch, RootState } from "../../app/store";
 export default function Dashboard() {
   // initialize the redux hook
   const dispatch = useDispatch<AppDispatch>();
-  const { coins, isLoading, hasErrors } = useSelector(
+  const { coins, isLoading } = useSelector(
     (state: RootState) => state.coins
   );
-  console.log("dashboard", coins, isLoading, hasErrors);
 
   useEffect(() => {
     dispatch(fetchCoins());
@@ -30,9 +29,9 @@ export default function Dashboard() {
 
       <div className="content-section">
         <div className="left-col">
-          <MarketLeaders />
+          <MarketLeaders coins={coins} isLoading={isLoading} />
 
-          <CoinsCard />
+          <CoinsCard coins={coins} isLoading={isLoading} />
         </div>
         <div className="right-col">
           <EventsCard />

@@ -2,7 +2,9 @@ import { createSlice, createAsyncThunk, PayloadAction } from "@reduxjs/toolkit";
 import ApiService from "../services/ApiService";
 
 export const fetchCoins = createAsyncThunk("coins/coinsList", () =>
-  ApiService.get(`/coins/list`)
+  ApiService.get(
+    `/coins/markets?vs_currency=usd&page=1&sparkline=true&price_change_percentage=1h,24h,7d`
+  )
     .then((response) => response.data)
     .catch((error) => error)
 );
