@@ -14,7 +14,7 @@ export default function CoinsCard({coins, isLoading}: CoinsCardProps) {
 
       <div className="coins-list">
         {coins.map((coin) => (
-          <div key={coin.id}>
+          <div className="coin-card" key={coin.id}>
             {coin.name} ({coin.symbol})
           </div>
         ))}
