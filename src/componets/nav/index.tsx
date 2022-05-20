@@ -1,13 +1,13 @@
 import React from "react";
 import "./index.scss";
 import { NavLink } from "react-router-dom";
-import { BarChartFill, BorderWidth } from "react-bootstrap-icons";
+import { BarChartFill, BorderWidth, Pause } from "react-bootstrap-icons";
 
 export default function Nav() {
     return (
       <div className="nav-container">
         <button className="nav-btn">
-          <BarChartFill className="nav-icon" />
+          <Pause className="nav-icon" />
         </button>
 
         <div className="nav-menu">

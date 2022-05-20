@@ -25,15 +25,26 @@
         font-size: 18px;
     }
 
-    .icon {
+    .negative-change {
+        color: #F66A6F;
+    }
+
+    .up-icon {
         height: .7rem;
         width: .7rem;
         margin-left: .5rem;
     }
 
+    .down-icon {
+        height: .7rem;
+        width: .7rem;
+        margin-left: .5rem;
+        color: #F66A6F;
+    }
+
     .chart-container {
         position: relative;
-        height: 30vh;
+        height: 40vh;
         width: 100%;
         margin-top: 2rem;
     }

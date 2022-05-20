@@ -1,4 +1,4 @@
-import { createSlice, createAsyncThunk, PayloadAction } from "@reduxjs/toolkit";
+import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import ApiService from "../services/ApiService";
 
 export const fetchCoins = createAsyncThunk("coins/coinsList", () =>
@@ -26,7 +26,7 @@ export const coinsSlice = createSlice({
   initialState,
   reducers: {},
   extraReducers: {
-    [fetchCoins.pending.type]: (state, action) => {
+    [fetchCoins.pending.type]: (state) => {
       state.isLoading = true;
     },
     [fetchCoins.fulfilled.type]: (state, action) => {
@@ -34,7 +34,7 @@ export const coinsSlice = createSlice({
       state.isLoading = false;
       state.hasErrors = false;
     },
-    [fetchCoins.rejected.type]: (state, action) => {
+    [fetchCoins.rejected.type]: (state) => {
       state.isLoading = false;
       state.hasErrors = true;
     },

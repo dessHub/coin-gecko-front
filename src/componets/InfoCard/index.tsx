@@ -1,16 +1,31 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import "./index.scss";
 import { Globe, Github, Reddit } from "react-bootstrap-icons";
+import { RootState } from "../../app/store";
 
 export default function InfoCard() {
+  const {
+    coin,
+  } = useSelector((state: RootState) => state.info);
+  const {
+    description,
+    image,
+    market_data,
+    country_origin,
+    categories,
+    hashing_algorithm,
+  } = coin;
     
     return (
       <div className="info-card-cont">
-        <div className="coin-icon-cont"></div>
+        <div className="coin-icon-cont">
+          {image && <img src={image.small} alt="" />}
+        </div>
         <div className="title">Info Card</div>
         <div className="description-cont">
           <div>Description</div>
-          <p>lkfldkfld lkdfldkfld lkfldkfld lkfldkfd lkdfldkfdl lkfdlkfd</p>
+          <p>{description && description.en}</p>
         </div>
 
         <div className="sites">
@@ -31,30 +46,34 @@ export default function InfoCard() {
           <div className="divider"></div>
           <div className="fact-row">
             <span>Hashing Algorithm</span>
-            <span>SHA-256</span>
+            <span>{hashing_algorithm && hashing_algorithm}</span>
           </div>
           <div className="fact-row">
             <span>County Origin</span>
-            <span>Unknown</span>
+            <span>
+              {country_origin || country_origin === ""
+                ? "Unknown"
+                : country_origin}
+            </span>
           </div>
           <div className="fact-row">
             <span>Gategory</span>
-            <span>Cyptocurreny</span>
+            <span>{categories && categories[0]}</span>
           </div>
         </div>
 
         <div className="metrics-container">
           <div className="metric-row">
             <span>Total Supply</span>
-            <span>21000000.0</span>
+            <span>{market_data && market_data.total_supply}</span>
           </div>
           <div className="metric-row">
             <span>Max Supply</span>
-            <span>21000000.0</span>
+            <span>{market_data && market_data.max_supply}</span>
           </div>
           <div className="metric-row">
             <span>Circulating</span>
-            <span>21000000.0</span>
+            <span>{market_data && market_data.circulating_supply}</span>
           </div>
         </div>
       </div>
