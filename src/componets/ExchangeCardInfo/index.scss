@@ -1,0 +1,99 @@
+@import "../../styles/variables.scss";
+
+.exchange-card-cont {
+    width: 50%;
+    margin-right: 1rem;
+    background-color: $secondary-color;
+    border-radius: $border-radius;
+    padding: 1rem;
+    position: relative;
+
+    @media (max-width: $tablet-breakpoint) {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+
+    .title {
+        font-size: 14px;
+        color: $primary-text-color;
+    }
+
+    .input-row {
+        display: flex;
+        width: 100%;
+        margin: 1rem 0;
+        justify-content: space-between;
+    }
+
+    .input-cont {
+        width: 60%;
+        display: flex;
+        align-items: center;
+
+        label {
+            font-size: 12px;
+            margin-right: .5rem;
+        }
+
+        input {
+            width: stretch;
+            background-color: inherit;
+            color: #fff;
+            font-size: 18px;
+            font-weight: bold;
+            border: unset;
+        }
+
+        input:focus {
+            outline: none;
+        }
+    }
+
+    .form-select {
+        background-color: $primary-color;
+        color: #fff;
+        border: unset;
+        width: 5rem;
+        font-size: 14px;
+    }
+
+    .bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        label {
+            font-size: 12px;
+        }
+
+        button {
+            border: unset;
+            border-radius: $border-radius;
+            background-color: $secondary-color-3;
+            color: #fff;
+            font-size: 14px;
+            padding: .5rem 1rem;
+            width: 10rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        
+
+            .icon {
+                color: #fff;
+            }
+        }
+    }
+}
+
+.exchange-card-cont::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 4%;
+    width: 1px;
+    height: 2.5rem;
+    left: -.5%;
+    border-left: 4px solid $secondary-color-3;
+}

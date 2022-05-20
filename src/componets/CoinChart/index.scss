@@ -1,0 +1,51 @@
+@import "../../styles/variables.scss";
+
+.coin-chart-container {
+    width: 100%;
+    padding: 2rem;
+    background-color: $secondary-color;
+    border-radius: $border-radius;
+    margin-bottom: 2rem;
+
+    .top {
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    .amount {
+        font-size: 18px;
+        font-weight: bold;
+        color: #fff;
+        margin-right: 3rem;
+    }
+
+    .change {
+        color: $secondary-color-5;
+        font-size: 18px;
+    }
+
+    .negative-change {
+        color: #F66A6F;
+    }
+
+    .up-icon {
+        height: .7rem;
+        width: .7rem;
+        margin-left: .5rem;
+    }
+
+    .down-icon {
+        height: .7rem;
+        width: .7rem;
+        margin-left: .5rem;
+        color: #F66A6F;
+    }
+
+    .chart-container {
+        position: relative;
+        height: 40vh;
+        width: 100%;
+        margin-top: 2rem;
+    }
+}

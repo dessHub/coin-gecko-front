@@ -1,0 +1,82 @@
+@import "../../styles/variables.scss";
+
+.leaders-container {
+    display: flex;
+    flex-direction: column;
+    border-radius: $border-radius;
+    background-color: $secondary-color;
+    width: 100%;
+    height: 20rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+}
+
+.container-title {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.placeholder  {
+    background-color: $secondary-color-1;
+}
+
+.leaders-list {
+    width: 100%;
+    padding: 0 1rem;
+    overflow-y: auto;
+}
+
+.leaders-card::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 10%;
+    width: 1px;
+    height: 1rem;
+    left: -.1%;
+    border-left: 1px solid $primary-text-color;
+}
+
+.leaders-card {
+    margin: .5rem 0;
+    border-radius: $border-radius;
+    background-color: $secondary-color-1;
+    color: $primary-text-color;
+    height: 3rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .5rem;
+    position: relative;
+
+    .name {
+        width: 25%;
+        font-weight: bold;
+        font-size: 16px;
+    }
+
+    .chart {
+        width: 40%;
+        padding: 1rem 0;
+    }
+
+    .amount-change {
+        width: 15%;
+        font-size: 10px;
+        color: $secondary-color-5;
+        word-wrap: break-word;
+    }
+
+    .negative-change {
+        color: #F66A6F;
+    }
+
+    .amount {
+        width: 15%;
+        font-size: 16px;
+    }
+}

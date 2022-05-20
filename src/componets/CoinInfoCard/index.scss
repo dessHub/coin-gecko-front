@@ -1,0 +1,82 @@
+@import "../../styles/variables.scss";
+
+.coin-container {
+    display: flex;
+    width: 100%;
+    padding: 0.1rem 1rem;
+
+    @media (max-width: $tablet-breakpoint) {
+        flex-direction: column;
+    }
+
+    .filter-container {
+        width: 100%;
+        display: flex;
+        margin-bottom: 2rem;
+        margin-top: .1rem;
+
+        @media (max-width: $tablet-breakpoint) {
+         margin-top: .5rem;
+        }
+
+        .search-container {
+            width: 70%;
+            border-radius: $border-radius;
+            border: 1px solid $secondary-color;
+            margin-right: 1rem;
+            display: flex;
+            align-items: center;
+            padding-left: .2rem;
+        }
+
+        .search-icon {
+            color: $secondary-color-3;
+            height: 1.2rem;
+            width: 1.2rem;
+            margin-right: .5rem;
+        }
+
+        .search-input {
+            flex: 1;
+            background-color: inherit;
+            border: unset;
+            color: $primary-text-color;
+            padding: 0rem .2rem;
+            height: 3rem;
+        }
+
+        .search-input:focus {
+            border: unset;
+            outline: none;
+        }
+
+        .date-picker-cont {
+            flex: 1;
+            border-radius: $border-radius;
+            background-color: $secondary-color;
+            height: 3rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
+
+.conten-section {
+    width: 70%;
+    margin-right: 1rem;
+
+    @media (max-width: $tablet-breakpoint) {
+        width: 100%;
+        margin-right: 0rem;
+    }
+}
+
+.info-section {
+    flex: 1;
+
+    @media (max-width: $tablet-breakpoint) {
+        width: 100%;
+        margin-top: 2rem;
+    }
+}

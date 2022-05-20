@@ -1,0 +1,27 @@
+// variables
+@import "./styles/variables.scss";
+
+.app-container {
+    display: flex;
+    padding: 2rem .5rem;
+    width: 100%;
+    height: auto;
+    background-color: #18151D;
+    color: $primary-text-color;
+
+    @media (max-width: $tablet-breakpoint) {
+        flex-direction: column;
+    }
+}
+
+.main-container {
+  flex: 1;
+}
+
+.flex-container {
+  display: flex;
+
+  @media (max-width: $tablet-breakpoint) {
+    flex-direction: column;
+  }
+}

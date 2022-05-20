@@ -1,0 +1,90 @@
+@import "../../styles/variables.scss";
+
+.nav-container {
+    padding: .1rem;
+    width: 4rem;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    
+    @media (max-width: $tablet-breakpoint) {
+        flex-direction: row;
+        height: 4rem;
+        width: 100%;
+    }
+}
+
+.nav-btn {
+    border: unset;
+    border-radius: $border-radius;
+    height: 3rem;
+    width: 3rem;
+    background-color: $secondary-color;
+    color: $secondary-color-3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .nav-icon {
+        width: 80%;
+        height: 80%;
+        transform: rotate(90deg);
+    }
+}
+
+.nav-icon {
+    width: 70%;
+    height: 70%;
+    transform: rotate(90);
+}
+
+.nav-menu {
+    width: 3rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+    padding-top: .4rem;
+    background-color: $secondary-color;
+    border-radius: 8px;
+    
+    @media (max-width: $tablet-breakpoint) {
+        height: 3rem;
+        width: unset;
+        flex-direction: row;
+        justify-content: flex-start;
+        margin-top: 0;
+        padding-top: 0rem;
+        margin-left: 1rem;
+    }
+}
+
+.nav-menu-item {
+    border-radius: $border-radius;
+    height: 2.5rem;
+    width: 2.5rem;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-menu-link {
+    width: 80%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-icon {
+    width: 40%;
+    height: 40%;
+    color: $primary-text-color;
+}
+
+.active-nav {
+    background-color: $secondary-color-3;
+    border-radius: $border-radius;
+}
