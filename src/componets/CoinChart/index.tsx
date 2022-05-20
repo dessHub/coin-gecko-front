@@ -132,9 +132,9 @@ export default function CoinChart() {
           </div>
         )}
 
-        <div className="chart-container">
+        {!isLoading && (<div className="chart-container">
           <Line options={options} data={chartData} />
-        </div>
+        </div>)}
       </div>
     );
 }
