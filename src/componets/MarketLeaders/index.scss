@@ -29,6 +29,17 @@
     overflow-y: auto;
 }
 
+.leaders-card::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 10%;
+    width: 1px;
+    height: 1rem;
+    left: -.1%;
+    border-left: 1px solid $primary-text-color;
+}
+
 .leaders-card {
     margin: .5rem 0;
     border-radius: $border-radius;
@@ -40,6 +51,7 @@
     align-items: center;
     justify-content: space-between;
     padding: .5rem;
+    position: relative;
 
     .name {
         width: 25%;

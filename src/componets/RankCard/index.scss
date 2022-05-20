@@ -13,6 +13,7 @@
     border-radius: $border-radius;
     text-align: center;
     padding: 1rem;
+    position: relative;
 
     span {
         font-size: 14px;
@@ -24,4 +25,15 @@
         font-weight: bold;
         margin-top: 1rem;
     }
+}
+
+.rank-card::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 4%;
+    width: 1px;
+    height: 2rem;
+    left: -.5%;
+    border-left: 4px solid $secondary-color-3;
 }

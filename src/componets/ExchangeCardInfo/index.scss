@@ -6,6 +6,7 @@
     background-color: $secondary-color;
     border-radius: $border-radius;
     padding: 1rem;
+    position: relative;
 
     @media (max-width: $tablet-breakpoint) {
         width: 100%;
@@ -84,4 +85,15 @@
             }
         }
     }
+}
+
+.exchange-card-cont::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 4%;
+    width: 1px;
+    height: 2.5rem;
+    left: -.5%;
+    border-left: 4px solid $secondary-color-3;
 }
